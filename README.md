@@ -15,7 +15,7 @@ When creating a component for a library, you may want breakpoints based on your 
 * Since the technique uses simple css and basic html, it has excellent browser support.
 * The result when zooming a page (as far as i have checked) is identical as if you were to css media queries.
 * No installation needed.
-* Components content can adjust to width of parent container.
+* Content can adjust to width of parent container.
 * No need to define content based on individual use case.
 
 ## Drawbacks
