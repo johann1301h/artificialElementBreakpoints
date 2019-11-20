@@ -1,6 +1,6 @@
 ## About
 
-This repository defines a technique called 'artificial element breakpoints' for creating artificial element breakpoints based solely on html and css.
+This repository defines a technique called 'artificial element breakpoints' for creating element breakpoints based solely on html and css.
 
 ## Demo
 
