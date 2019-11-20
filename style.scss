@@ -1,0 +1,161 @@
+$margin: 20px;
+$height: 45px;
+$breakpoints: 5;
+$breakpoint-1: 500px;
+$breakpoint-2: 800px;
+
+$fullWidthYear: 200px;
+$fullWidthMonth: 300px;
+$fullWidthToday: 200px;
+$flexGrowYearMedium: 1;
+$flexGrowMonthMedium: 2;
+$flexGrowTodayMedium: 1;
+$flexGrowYearSmall: 2;
+$flexGrowMonthSmall: 3;
+$marginTop: $margin;
+$marginLeft: $margin;
+$marginRight: $margin;
+$marginBottom: $margin;
+$marginSpacing: $margin;
+$totalHeight: $marginTop + $height + $marginBottom;
+$innerContainerOffsetTop: - ( 1 + $breakpoints ) * $totalHeight;
+$innerContainerHeight: ( 1 + $breakpoints ) * $totalHeight;
+
+body {
+  margin: 40px;
+}
+
+.define {
+  background: linear-gradient(45deg, orchid, green);
+}
+
+.break {
+  background: linear-gradient(45deg, cyan, green);
+}
+
+.block {
+  background: linear-gradient(45deg, orchid, green);
+}
+
+.content {
+  background: linear-gradient(0deg, blue, pink);
+}
+
+.year, .month, .today {
+  background: linear-gradient(45deg, pink, orange);
+}
+
+.border {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  bottom: -10px;
+  right: -10px;
+  border: 5px dashed red;
+  z-index: 2;
+}
+
+.inside {
+  justify-content: space-between;
+  position: absolute;
+  font-size: 0px;
+  display: flex;
+  bottom: $marginBottom;
+  right: $marginRight;
+  left: $marginLeft;
+  top: $marginTop;
+}
+
+.year, .month, .today {
+  height: 100%;
+}
+
+.small {
+  .year {
+    flex-grow: $flexGrowYearSmall;
+    margin-right: 0.5 * $marginSpacing;
+  }
+  .month {
+    flex-grow: $flexGrowMonthSmall;
+    margin-left: 0.5 * $marginSpacing;
+  }
+}
+
+.medium {
+  .year {
+    flex-grow: $flexGrowYearMedium;
+    margin-right: 0.5 * $marginSpacing;
+  }
+  .month {
+    flex-grow: $flexGrowMonthMedium;
+    margin: 0px (0.5 * $marginSpacing);
+  }
+  .today {
+    flex-grow: $flexGrowTodayMedium;
+    margin-left: 0.5 * $marginSpacing;
+  }
+}
+
+.large {
+  .year {
+    width: $fullWidthYear;
+  }
+  .month {
+    width: $fullWidthMonth;
+  }
+  .today {
+    width: $fullWidthToday;
+  }
+}
+
+/*---- artificial element breakpoints ----*/
+
+.container {
+  top: 510px;
+  position: relative;
+  height: $totalHeight;
+  width: 100%;
+}
+
+.wrapper {
+  font-size: 0px;
+  position: relative;
+  top: $innerContainerOffsetTop;
+  height: $innerContainerHeight;
+  width: 100%;
+}
+
+.define {
+  position: relative;
+  display: inline-block;
+  height: $totalHeight;
+  width: 50%;
+}
+
+.break {
+  position: relative;
+  display: inline-block;
+  height: $totalHeight;
+}
+
+.block {
+  position: relative;
+  display: inline-block;
+  height: $totalHeight;
+  width: 100%;
+}
+
+.content {
+  position: relative;
+  display: inline-block;
+  height: $totalHeight;
+  width: 100%;
+}
+
+.break-1 {
+  width: 0.5*$breakpoint-1;
+}
+
+.break-2 {
+  width: 0.5*$breakpoint-2;
+}
