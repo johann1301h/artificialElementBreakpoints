@@ -1,6 +1,6 @@
 ## About
 
-This repository defines a technique called 'artificial breakpoints' for creating artificial element breakpoints based solely on html and css.
+This repository defines a technique called 'artificial element breakpoints' for creating artificial element breakpoints based solely on html and css.
 
 ## Demo
 
@@ -121,7 +121,11 @@ Set the following css.
   height: [H];
   width: 100%;
 }
+```
 
+Then you can add your custom breakpoint and content classes.
+
+```
 .break-1 {
   width: 0.5*[B1];
 }
